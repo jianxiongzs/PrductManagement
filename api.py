@@ -8,7 +8,10 @@ import os
 
 app = Flask(__name__)
 
-filename = os.path.join(os.getenv('VIRTUAL_ENV') or '/', 'etc/config.conf')
+#注册蓝图
+#app.register_blueprint()
+
+filename = os.path.join(os.getenv('VIRTUAL_ENV') or '.', '/config.conf')
 
 def getconfig(filename):
     cf = configparser.ConfigParser()
